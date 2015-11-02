@@ -1,7 +1,7 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 <article class="single-article {{post_class}}">
-
+		
     <header>
 
     	<span>{{date published_at format="DD MMMM YYYY"}} by {{author.name}} {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
@@ -11,7 +11,7 @@
     </header>
 
     <section>
-
+    	{{image}}
     	{{content}}
 
     </section>
