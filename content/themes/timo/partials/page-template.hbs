@@ -1,0 +1,18 @@
+{{! This is the static page template; Everything inside the #post tags pulls data from the post }}
+	
+{{#post}}           
+	<article class="{{post_class}}">
+	  <header class="page-header">
+
+	    <h1 class="page-title">{{title}}</h1>
+	    <section class="page-meta">
+	      {{tags prefix=" on "}}
+	    </section>  
+	  </header>
+	  <section class="page-content">
+	    {{content}}
+	  </section>     
+	</article>
+
+{{/post}}   
+	
