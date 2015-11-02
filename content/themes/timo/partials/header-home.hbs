@@ -23,10 +23,14 @@
 		</ul>
 		<nav id="main-navigation">
 			<ul class="nav-list clearfix">
-				<!-- use nav-current class to show current tab -->
-        <li class="menu-item nav-home" role="presentation"><a href="/">Blog</a></li>
-        <li class="menu-item nav-about" role="presentation"><a href="/about">About me</a></li>
-
+				{{#if @blog.navigation}}
+					{{#foreach @blog.navigation}}
+	       	 <li class="menu-item nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+	        {{/foreach}}
+	      {{else}}
+					<!-- use nav-current class to show current tab -->
+       	 	<li class="menu-item nav-home nav-current" role="presentation"><a href="/">Blog</a></li>
+        {{/if}}
 			</ul>
 		</nav>
 	</div>
